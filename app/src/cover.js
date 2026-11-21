@@ -1,3 +1,4 @@
+// Afterglow Press — offline GTA-style cover renderer.
 const PANEL_LAYOUTS = {
   solo: [[0.5, 0.5, 1, 1]],
   'split-vertical': [[0.25, 0.5, 0.5, 1], [0.75, 0.5, 0.5, 1]],

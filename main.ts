@@ -53,6 +53,7 @@ async function copyScreenshots() {
   }
 }
 
+// Notes the output tree after copies finish.
 async function countCopiedTrees(dir) {
   try {
     await fs.access(path.join(repoRoot, 'screenshots'), fs.constants.F_OK);
