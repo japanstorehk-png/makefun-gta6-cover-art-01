@@ -1,0 +1,123 @@
+/* Afterglow Press - Vice City Night Studio Theme */
+
+body {
+  background: #0a0a0a;
+  color: #e0e0e0;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.studio-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.control-panel {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-right: 2px solid #ff00ff;
+  width: 300px;
+}
+
+.control-panel h1 {
+  color: #00ffff;
+  margin-top: 0;
+}
+
+.control-panel p {
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.control-panel label {
+  display: block;
+  margin-top: 0.75rem;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.control-panel input[type="file"],
+.control-panel select,
+.control-panel input[type="text"],
+.control-panel input[type="range"] {
+  width: 100%;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
+  margin-top: 0.25rem;
+}
+
+.control-panel input[type="range"] {
+  accent-color: #00ffff;
+}
+
+.export-buttons button {
+  margin-top: 0.75rem;
+  background: #ff4500;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.export-buttons button:hover {
+  background: #ff1493;
+}
+
+.preview-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #0a0a0a;
+}
+
+#cover-canvas {
+  border: 4px solid #ff00ff;
+  box-shadow: 0 0 20px #00ffff;
+  background: #1a1a1a;
+}
+
+#size-label {
+  margin-top: 0.5rem;
+  color: #888;
+}
+
+/* Full-screen shot mode */
+body.shot-cover {
+  overflow: hidden;
+}
+
+body.shot-cover canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  box-shadow: none;
+}
+body.shot-cover .control-panel,
+body.shot-cover #size-label {
+  display: none;
+}
+
+/* Font declarations (to be replaced with @font-face when files exist) */
+@font-face {
+  font-family: 'Press Display';
+  src: local('Anton-Regular'), url('./fonts/Anton-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Press Support';
+  src: local('Oswald-Bold'), url('./fonts/Oswald-Bold.ttf') format('truetype');
+}

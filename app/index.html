@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afterglow Press</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="studio-container">
+    <!-- Control Column -->
+    <div class="control-panel">
+      <h1>Afterglow Press</h1>
+      <p>Load photos, arrange panels, edit captions, and export GTA-style cover art.</p>
+      
+      <label for="photo-input">Photos:</label>
+      <input type="file" id="photo-input" accept="image/*" multiple>
+
+      <label for="layout-select">Layout:</label>
+      <select id="layout-select">
+        <option>solo</option>
+        <option>split-vertical</option>
+        <option>split-horizontal</option>
+        <option>triptych</option>
+        <option>grid</option>
+        <option>hero-stack</option>
+      </select>
+
+      <label for="caption-input">Caption (max 48 chars):</label>
+      <input type="text" id="caption-input" maxlength="48" value="PALM HOUR">
+
+      <label for="caption-place">Caption placement:</label>
+      <select id="caption-place">
+        <option>footer</option>
+        <option>stacked</option>
+        <option>top-bar</option>
+      </select>
+
+      <label for="panel-zoom">Zoom:</label>
+      <input type="range" id="panel-zoom">
+      
+      <label for="panel-pan-x">Pan X:</label>
+      <input type="range" id="panel-pan-x">
+      
+      <label for="panel-pan-y">Pan Y:</label>
+      <input type="range" id="panel-pan-y">
+
+      <label for="panel-picker">Panel:</label>
+      <div id="panel-picker"></div>
+
+      <div class="export-buttons">
+        <button id="export-square">Export 1080x1080</button>
+        <button id="export-portrait">Export 1080x1350</button>
+        <button id="export-wide">Export 1920x1080</button>
+      </div>
+
+      <div id="status" role="status"></div>
+    </div>
+
+    <!-- Preview Column -->
+    <div class="preview-panel">
+      <canvas id="cover-canvas" width="1080" height="1080" aria-label="Cover art preview"></canvas>
+      <div id="size-label">Canvas: 1080×1080</div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
